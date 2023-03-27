@@ -13,13 +13,14 @@ public class Bussy {
         while(ny){
         //en algoritm för att få in personuppgifterna i en array så att det kan injekteras i plats stället
         //den kommer skrivas över för att icke betalande kunder behöver inte sparas
+        //så johan om du inte än fattat så över skrids bara hamburger variabeln för varje person som skriver
         String[]hamburger = new String[5];
         System.out.println("personuppgift:");
         for(int i=0; i<4; i++)
         {
             switch (i) {
                 case 0:
-                    System.out.println("personnummer (yyyymmdd-xxxx)");
+                    System.out.println("personnummer (yyyymmddxxxx)");
                     break;
                 case 1:
                     System.out.println("FÖRNAMN:");
@@ -42,7 +43,7 @@ public class Bussy {
             }
             
             if(i!=3){
-            hamburger[i] = sex.next();
+            hamburger[i] = sex.nextLine();
             }
             else if(i==3){hamburger[3]=anal;}
             if(i==0){
@@ -53,12 +54,25 @@ public class Bussy {
                 System.out.println("skriv om personnumret tack");
             }}
         }
-        
-        for(int i=0; i<4; i++){
+        //deklarerar åldern på person nummer hamburger
+        //här med hjälp av året endast
+        String assy=hamburger[0];
+        String ass=assy.substring(0,4);
+        int aldr= datår-Integer.parseInt(ass);
+        //sedan jämförs månaderna och om man är äldre än månaden så är allt lunch(lugnt) och åldern stannar annars så sjunker den med 1
+        if(ass.substring()<=datmån)
+        {
+
+        }
+        for(int i=0; i<5; i++)
+        {
             System.out.println(hamburger[i]);
         }
         ny=false;
         }
+                
+
+
                 //skapar en vadå typ multipel array i 2d då int lon och lat är array rows och coloumns respektive
         int lon=4;//det blir 5 coloumner
         int lat=20;
@@ -72,7 +86,7 @@ public class Bussy {
         
         
         //System.out.println(bein[0][0]);
-        
+
     }
      
 }
