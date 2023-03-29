@@ -31,6 +31,7 @@ public class Bussy {
                 case 3:
                     System.out.println("KÖN:\nMAN KVINNA  ANNAT");
                     anal=sex.next();
+                    
                     switch(anal)
                     {
                         case "man" -> kön=anal;
@@ -56,14 +57,19 @@ public class Bussy {
         }
         //deklarerar åldern på person nummer hamburger
         //här med hjälp av året endast
-        String assy=hamburger[0];
+        String assy=hamburger[0].substring(0,8);
         String ass=assy.substring(0,4);
         int aldr= datår-Integer.parseInt(ass);
         //sedan jämförs månaderna och om man är äldre än månaden så är allt lunch(lugnt) och åldern stannar annars så sjunker den med 1
-        if(ass.substring()<=datmån)
+        if(datmån<Integer.parseInt(assy.substring(4,6)))
         {
-
+            aldr-=1;
+        }else if(datdag<Integer.parseInt(assy.substring(6,8)))
+        {
+            aldr-=1;
         }
+        hamburger[4]=Integer.toString(aldr); 
+            System.out.println(assy.substring(0,4)+" "+assy.substring(4,6)+" "+assy.substring(6,8));
         for(int i=0; i<5; i++)
         {
             System.out.println(hamburger[i]);
@@ -74,6 +80,8 @@ public class Bussy {
 
 
                 //skapar en vadå typ multipel array i 2d då int lon och lat är array rows och coloumns respektive
+                
+                // från roe, detta suger snälla sluta allokera minne som inte behöver användas pls jag får anti-stånd
         int lon=4;//det blir 5 coloumner
         int lat=20;
         //själva array coloumns
