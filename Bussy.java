@@ -4,31 +4,48 @@ public class Bussy {
 
     public static void main(String[] args) {
         Scanner sex=new Scanner(System.in);
-        String anal ="sex";
+        //du vet vad variablar är mannen
+        
         final int datår = 2023;
         final int datmån = 04;
         final int datdag = 01;
         String kön;
         boolean ny=true;
+        String[] hamburger = new String[5];
+        //test
+        String test = "123abc";
+        
+        System.out.println(test.matches("\\d+"));
+        //test
+        
+        //allt under är att välja grejor ba
+        System.out.println("1. regestrera\n2. sök\n3.");
+        String rumpa=sex.nextLine();
+        switch(rumpa)
+        {
+            case "regestrera" -> ny=true;
+            case "1" -> ny=true;
+            
+            
+        }
+        
+        //allt över är att välja grejor ba
+        //allt under typ är för person reg
+
         while(ny){
         //en algoritm för att få in personuppgifterna i en array så att det kan injekteras i plats stället
         //den kommer skrivas över för att icke betalande kunder behöver inte sparas
         //så johan om du inte än fattat så över skrids bara hamburger variabeln för varje person som skriver
-        String[]hamburger = new String[5];
+        String anal ="sex";
+        
         System.out.println("personuppgift:");
         for(int i=0; i<4; i++)
         {
             switch (i) {
-                case 0:
-                    System.out.println("personnummer (yyyymmddxxxx)");
-                    break;
-                case 1:
-                    System.out.println("FÖRNAMN:");
-                    break;
-                case 2:
-                    System.out.println("EFTERNAMN:");
-                    break;
-                case 3:
+                case 0 -> System.out.println("personnummer (yyyymmddxxxx)");
+                case 1 -> System.out.println("FÖRNAMN:");
+                case 2 -> System.out.println("EFTERNAMN:");
+                case 3 -> {
                     System.out.println("KÖN:\nMAN KVINNA  ANNAT");
                     anal=sex.next();
                     
@@ -38,9 +55,10 @@ public class Bussy {
                         case "kvinna" -> kön=anal;
                         case "annat" -> kön=anal;
                         default -> {System.out.println("skriv in ett giltigt val"); i=3;}
-                    }   break;
-                default:
-                    break;
+                    }
+                }
+                default -> {
+                }
             }
             
             if(i!=3){
@@ -50,7 +68,7 @@ public class Bussy {
             if(i==0){
             String txt=hamburger[0];
             
-            if(txt.length()!=12){
+            if(txt.length()!=12||!txt.matches("\\d+")){
             i=-1;//den här if satsen gör bara så att om personnumret inte är 8 charactärer långt så måste man skriva om det
                 System.out.println("skriv om personnumret tack");
             }}
@@ -75,10 +93,7 @@ public class Bussy {
             System.out.println(hamburger[i]);
         }
         ny=false;
-        }
-                
-
-
+        }//allt över är för person reg
                 //skapar en vadå typ multipel array i 2d då int lon och lat är array rows och coloumns respektive
                 
                 // från roe, detta suger snälla sluta allokera minne som inte behöver användas pls jag får anti-stånd
@@ -91,10 +106,15 @@ public class Bussy {
         {
             bein[i] = new String[lat];
         }
-        
-        
-        //System.out.println(bein[0][0]);
+          //System.out.println(bein[0][0]);
 
+          
+          
+          //allt under är för placeringar
+          
+          if(Integer.parseInt(hamburger[0])<18){
+              
+          }
     }
      
 }
