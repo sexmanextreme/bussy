@@ -12,22 +12,24 @@ public class Bussy {
         String kön;
         boolean ny=true;
         String[] hamburger = new String[5];
-        //test
+        /*//test
         String test = "123abc";
         
         System.out.println(test.matches("\\d+"));
-        //test
+        //test*/
         
         //allt under är att välja grejor ba
-        System.out.println("1. regestrera\n2. sök\n3.");
+        boolean valet=true;
+        while(valet){
+        System.out.println("1. registrera\n2. sök\n3.");
         String rumpa=sex.nextLine();
         switch(rumpa)
         {
-            case "regestrera" -> ny=true;
-            case "1" -> ny=true;
+            case "registrera" -> {ny=true; valet=false;}
+            case "1" -> {ny=true; valet=false;}
+            default -> System.out.println("välj något annat tack");
             
-            
-        }
+        }}
         
         //allt över är att välja grejor ba
         //allt under typ är för person reg
@@ -112,7 +114,8 @@ public class Bussy {
           
           //allt under är för placeringar
           
-          if(Integer.parseInt(hamburger[0])<18){
+          if(Integer.parseInt(hamburger[4])<18||Integer.parseInt(hamburger[4])>69){
+              System.out.println("du är tyvärr inte i åldern att välja plats själv\nskulle du vilja fortsätta till betalningen?\n\nja/nej");
               
           }
     }
