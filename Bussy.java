@@ -51,7 +51,7 @@ public class Bussy {
                     System.out.println("KÖN:\nMAN KVINNA  ANNAT");
                     anal=sex.next();
                     
-                    switch(anal)
+                    switch(anal.toLowerCase())
                     {
                         case "man" -> kön=anal;
                         case "kvinna" -> kön=anal;
@@ -116,8 +116,16 @@ public class Bussy {
           
           if(Integer.parseInt(hamburger[4])<18||Integer.parseInt(hamburger[4])>69){
               System.out.println("du är tyvärr inte i åldern att välja plats själv\nskulle du vilja fortsätta till betalningen?\n\nja/nej");
-              
-          }
+              String fötter=sex.next();
+              boolean q=true;
+              while(q){
+               switch(fötter.toLowerCase())
+               {
+                   case "ja" -> q=true;
+                   case "j" -> q=true;
+                   default -> q=true;
+               }
+          }}
     }
      
 }
