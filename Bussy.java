@@ -17,7 +17,7 @@ public class Bussy {
         
         System.out.println(test.matches("\\d+"));
         //test*/
-        
+        for(int a=1;a<36; a++){
         //allt under är att välja grejor ba
         boolean valet=true;
         while(valet){
@@ -59,8 +59,8 @@ public class Bussy {
                         default -> {System.out.println("skriv in ett giltigt val"); i=3;}
                     }
                 }
-                default -> {
-                }
+                default -> {}
+                
             }
             
             if(i!=3){
@@ -112,7 +112,8 @@ public class Bussy {
 
           
           
-          //allt under är för placeringar
+          //allt under är för placeringar och betalning
+          boolean betal;
           
           if(Integer.parseInt(hamburger[4])<18||Integer.parseInt(hamburger[4])>69){
               System.out.println("du är tyvärr inte i åldern att välja plats själv\nskulle du vilja fortsätta till betalningen?\n\nja/nej");
@@ -121,11 +122,14 @@ public class Bussy {
               while(q){
                switch(fötter.toLowerCase())
                {
-                   case "ja" -> q=true;
-                   case "j" -> q=true;
-                   default -> q=true;
+                   case "ja" -> {q=false; betal=true;}
+                   case "j" -> {q=false; betal=true;}
+                   case "nej"->{q=false; System.out.println("du blir nu skickad till startmenyn");}
+                   case "n"->{q=false; System.out.println("du blir nu skickad till startmenyn");}
+                   default -> System.out.println("snälla skriv in \"ja\"/\"nej\"");
                }
           }}
+        }
     }
      
 }
