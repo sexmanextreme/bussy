@@ -11,6 +11,8 @@ public class Bussy {
         final int datdag = 01;
         String kön;
         boolean ny=true;
+        boolean betal=false;
+        int konstig=0;
         String[] hamburger = new String[5];
         /*//test
         String test = "123abc";
@@ -51,15 +53,14 @@ public class Bussy {
                     System.out.println("KÖN:\nMAN KVINNA  ANNAT");
                     anal=sex.next();
                     
-                    switch(anal.toLowerCase())
-                    {
+                    switch(anal.toLowerCase())                    {
                         case "man" -> kön=anal;
                         case "kvinna" -> kön=anal;
                         case "annat" -> kön=anal;
-                        default -> {System.out.println("skriv in ett giltigt val"); i=3;}
+                        default -> {System.out.println("skriv in ett giltigt val"); i=2;}
                     }
                 }
-                default -> {}
+                //default -> {i=0;}
                 
             }
             
@@ -113,9 +114,10 @@ public class Bussy {
           
           
           //allt under är för placeringar och betalning
-          boolean betal;
+          
           
           if(Integer.parseInt(hamburger[4])<18||Integer.parseInt(hamburger[4])>69){
+              konstig=1;
               System.out.println("du är tyvärr inte i åldern att välja plats själv\nskulle du vilja fortsätta till betalningen?\n\nja/nej");
               String fötter=sex.next();
               boolean q=true;
@@ -128,8 +130,14 @@ public class Bussy {
                    case "n"->{q=false; System.out.println("du blir nu skickad till startmenyn");}
                    default -> System.out.println("snälla skriv in \"ja\"/\"nej\"");
                }
-          }}
+          }sex.nextLine();
+          } while(betal){
+              if(konstig==1){
+                  System.out.println("är du redo att betala 299,90:- ?");
+              }
+              
+          }
+          
         }
     }
-     
 }
