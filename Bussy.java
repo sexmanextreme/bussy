@@ -12,6 +12,7 @@ public class Bussy {
         String kön;
         boolean ny=true;
         boolean betal=false;
+        boolean plats=false;
         int konstig=0;
         String[] hamburger = new String[5];
         /*//test
@@ -124,18 +125,28 @@ public class Bussy {
               while(q){
                switch(fötter.toLowerCase())
                {
-                   case "ja" -> {q=false; betal=true;}
-                   case "j" -> {q=false; betal=true;}
-                   case "nej"->{q=false; System.out.println("du blir nu skickad till startmenyn");}
-                   case "n"->{q=false; System.out.println("du blir nu skickad till startmenyn");}
+                   case "ja" , "j" -> {q=false; betal=true;}
+                //    case "j" -> {q=false; betal=true;}
+                   case "nej" , "n" ->{q=false; System.out.println("du blir nu skickad till startmenyn");}
+                //    case "n"->{q=false; System.out.println("du blir nu skickad till startmenyn");}
                    default -> System.out.println("snälla skriv in \"ja\"/\"nej\"");
                }
           }sex.nextLine();
           } while(betal){
               if(konstig==1){
-                  System.out.println("är du redo att betala 299,90:- ?");
+                  System.out.println("är du redo att betala 299,90:- ? \n ja/nej");
               }
-              
+              String lår=sex.next();
+              switch(lår.toLowerCase())
+              {
+                case "ja" , "j" ->{plats=true; System.out.println("tack så mycket för ert betalande");}
+                case "nej" , "n" -> {betal=false; System.out.println("du blir nu skickad till startmenyn");}
+              }
+              String tår=sex.next();
+            //   switch(tår)
+            //   {
+            //     case 
+            //   }
           }
           
         }
