@@ -143,6 +143,15 @@ public class Bussy {
                 case "nej" , "n" -> {betal=false; System.out.println("du blir nu skickad till startmenyn");}
               }
               String tår=sex.next();
+              System.out.println
+              ("""
+                      
+              
+                      """);
+              
+              
+
+
             //   switch(tår)
             //   {
             //     case 
