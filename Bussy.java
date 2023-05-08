@@ -102,13 +102,16 @@ public class Bussy {
                 
                 // från roe, detta suger snälla sluta allokera minne som inte behöver användas pls jag får anti-stånd
         int lon=4;//det blir 5 coloumner
-        int lat=20;
+        int lat=12;
         //själva array coloumns
         String[][] bein = new String[lon][];
         //och array rows
         for(int i=0;i<lon;i++)
         {
             bein[i] = new String[lat];
+            if(i=lon){
+                bein[4] = new String[13];
+            }
         }
           //System.out.println(bein[0][0]);
 
@@ -145,11 +148,21 @@ public class Bussy {
               String tår=sex.next();
               System.out.println
               ("""
-                      
-              
-                      """);
-              
-              
+              tack snälla välj en plats
+              01 02 __ 03 04
+              05 06 __ 07 08
+              09 10 __ 11 12
+              13 14 __ 15 16
+              17 18 __ 19 20
+              21 22 __ 23 24
+              25 26 __ 27 28
+              29 30 __ 31 32
+              33 34 __ 35 36
+              37 38 39 40 41
+              """);
+              String å=tår mod 4;
+              =hamburger;
+              //modulo in java??
 
 
             //   switch(tår)
