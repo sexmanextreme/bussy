@@ -160,8 +160,8 @@ public class Bussy {
               33 34 __ 35 36
               37 38 39 40 41
               """);
-              String å=tår mod 4;
-              =hamburger;
+              int å = Integer.parseInt(tår)/4;
+               å=hamburger;
               //modulo in java??
 
 
