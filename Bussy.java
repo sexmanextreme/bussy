@@ -109,7 +109,7 @@ public class Bussy {
         for(int i=0;i<lon;i++)
         {
             bein[i] = new String[lat];
-            if(i=lon){
+            if(i==lon){
                 bein[4] = new String[13];
             }
         }
@@ -160,9 +160,9 @@ public class Bussy {
               33 34 __ 35 36
               37 38 39 40 41
               """);
-              int å = Integer.parseInt(tår)/4;
+              /*int å = Integer.parseInt(tår)/4;
                å=hamburger;
-              //modulo in java??
+              */
 
 
             //   switch(tår)
